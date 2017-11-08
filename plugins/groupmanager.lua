@@ -12,7 +12,7 @@ end
     local data = load_data(_config.moderation.data)
   if data[tostring(msg.to.id)] then
 if not lang then
-   return '_Group is already added_'
+   return '⚔️از قبل آماده پشتیبانی از مردم این قلمرو بود گلادیتور عرفان⚔️'
 else
 return 'گروه در لیست گروه های مدیریتی ربات هم اکنون موجود است'
   end
@@ -75,7 +75,7 @@ end
     if not lang then
   return '*Group has been added*'..msg_caption
 else
-  return 'گروه با موفقیت به لیست گروه های مدیریتی ربات افزوده شد'..msg_caption
+  return '⚔️ آماده پشتیبانی از مردم این قلمرو هستم  گلادیاتور عرفان⚔️'..msg_caption
 end
 end
 
@@ -96,7 +96,7 @@ local lang = redis:get(hash)
   if not lang then
     return '_Group is not added_'
 else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
+    return 'این قلمرو را تصرف نکرده ایم🔱'
    end
   end
 
@@ -111,7 +111,7 @@ else
  if not lang then
   return '*Group has been removed*'
  else
-  return 'گروه با موفیت از لیست گروه های مدیریتی ربات حذف شد'
+  return '🗯گروه هم اکنون از لیست گروه ربات حذف شد'
 end
 end
 
@@ -261,7 +261,7 @@ if administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] then
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is already in_ *white list*", 0, "md")
 else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل در لیست سفید بود*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *🥇از قبل عضو ویژه بود🥇*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] = user_name
@@ -269,7 +269,7 @@ administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] = user_na
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been added to_ *white list*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *به لیست سفید اضافه شد*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *🥇 عضو ویژه شد 🥇*", 0, "md")
    end
 end
 tdcli_function ({
@@ -293,7 +293,7 @@ if not administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] th
     if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is not in_ *white list*", 0, "md")
     else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل در لیست سفید نبود*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل عضو ویژه نبود❗️*", 0, "md")
    end
   end
 administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] = nil
@@ -301,7 +301,7 @@ administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] = nil
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been removed from_ *white list*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از لیست سفید حذف شد*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از عضو ویژه حذف شد❗️*", 0, "md")
    end
 end
 tdcli_function ({
@@ -323,7 +323,7 @@ if administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] then
     if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is already a_ *group owner*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل صاحب گروه بود*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *امپراطور بود*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] = user_name
@@ -331,7 +331,7 @@ administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] = user_name
    if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is now the_ *group owner*", 0, "md")
    else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *به مقام صاحب گروه منتصب شد*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *امپراطور شد*", 0, "md")
    end
 end
 tdcli_function ({
@@ -353,7 +353,7 @@ if administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] then
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is already a_ *moderator*", 0, "md")
 else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل مدیر گروه بود*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *گلادیتاور بود*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = user_name
@@ -361,7 +361,7 @@ administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = user_name
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been_ *promoted*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *به مقام مدیر گروه منتصب شد*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *گلادیاتور شد*", 0, "md")
    end
 end
 tdcli_function ({
@@ -383,7 +383,7 @@ if not administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] then
    if not lang then
 return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is not a_ *group owner*", 0, "md")
    else
-return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* *از قبل صاحب گروه نبود*", 0, "md")
+return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* *از قبل امپراطور نبود*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] = nil
@@ -391,7 +391,7 @@ administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] = nil
    if not lang then
 return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is no longer a_ *group owner*", 0, "md")
     else
-return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از مقام صاحب گروه برکنار شد*", 0, "md")
+return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از مقام امپراطوری برکنار شد*", 0, "md")
    end
 end
 tdcli_function ({
@@ -411,7 +411,7 @@ if not administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] then
     if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is not a_ *moderator*", 0, "md")
     else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل مدیر گروه نبود*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل گلادیاتور نبود*", 0, "md")
    end
   end
 administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = nil
@@ -419,7 +419,7 @@ administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = nil
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been_ *demoted*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از مقام مدیر گروه برکنار شد*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از مقام گلادیاتوری برکنار شد*", 0, "md")
    end
 end
 tdcli_function ({
@@ -473,7 +473,7 @@ if administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] then
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is already in_ *white list*", 0, "md")
 else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل در لیست سفید بود*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *🏅از قبل عضو ویژه بود🏅*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] = user_name
@@ -481,7 +481,7 @@ administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] = user_na
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been added to_ *white list*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *به لیست سفید اضافه شد*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *🥇 عضو ویژه شد 🥇*", 0, "md")
    end
 end
     if cmd == "remwhitelist" then
@@ -493,7 +493,7 @@ if not administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] th
     if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is not in_ *white list*", 0, "md")
     else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل در لیست سفید نبود*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل عضو ویژه نبود❗️*", 0, "md")
    end
   end
 administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] = nil
@@ -501,7 +501,7 @@ administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] = nil
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been removed from_ *white list*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از لیست سفید حذف شد*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از عضو ویژه حذف شد❗️*", 0, "md")
    end
 end
 if cmd == "setowner" then
@@ -509,7 +509,7 @@ if administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] then
     if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is already a_ *group owner*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل صاحب گروه بود*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *امپراطور بود*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] = user_name
@@ -517,7 +517,7 @@ administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] = user_name
    if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is now the_ *group owner*", 0, "md")
    else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *به مقام صاحب گروه منتصب شد*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *امپراطور شد*", 0, "md")
    end
 end
   if cmd == "promote" then
@@ -525,7 +525,7 @@ if administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] then
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is already a_ *moderator*", 0, "md")
 else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل مدیر گروه بود*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *گلادیتاور بود*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = user_name
@@ -533,7 +533,7 @@ administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = user_name
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been_ *promoted*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *به مقام مدیر گروه منتصب شد*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *گلادیاتور شد*", 0, "md")
    end
 end
    if cmd == "remowner" then
@@ -541,7 +541,7 @@ if not administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] then
    if not lang then
 return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is not a_ *group owner*", 0, "md")
    else
-return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* *از قبل صاحب گروه نبود*", 0, "md")
+return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* *از قبل امپراطور نبود*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] = nil
@@ -549,7 +549,7 @@ administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] = nil
    if not lang then
 return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is no longer a_ *group owner*", 0, "md")
     else
-return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از مقام صاحب گروه برکنار شد*", 0, "md")
+return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از مقام امپراطوری برکنار شد*", 0, "md")
    end
 end
    if cmd == "demote" then
@@ -557,7 +557,7 @@ if not administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] then
     if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is not a_ *moderator*", 0, "md")
     else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل مدیر گروه نبود*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل گلادیاتور نبود*", 0, "md")
    end
   end
 administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = nil
@@ -565,7 +565,7 @@ administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = nil
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been_ *demoted*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از مقام مدیر گروه برکنار شد*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از مقام گلادیاتوری برکنار شد*", 0, "md")
    end
 end
    if cmd == "id" then
@@ -621,7 +621,7 @@ if administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] then
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is already in_ *white list*", 0, "md")
 else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل در لیست سفید بود*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *🏅از قبل عضو ویژه بود🏅*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] = user_name
@@ -629,7 +629,7 @@ administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] = user_na
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been added to_ *white list*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *به لیست سفید اضافه شد*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *🥇 عضو ویژه شد 🥇*", 0, "md")
    end
 end
     if cmd == "remwhitelist" then
@@ -641,7 +641,7 @@ if not administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] th
     if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is not in_ *white list*", 0, "md")
     else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل در لیست سفید نبود*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل عضو ویژه نبود❗️*", 0, "md")
    end
   end
 administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] = nil
@@ -649,7 +649,7 @@ administration[tostring(arg.chat_id)]['whitelist'][tostring(data.id_)] = nil
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been removed from_ *white list*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از لیست سفید حذف شد*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از عضو ویژه حذف شد❗️*", 0, "md")
    end
 end
   if cmd == "setowner" then
@@ -657,7 +657,7 @@ end
     if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is already a_ *group owner*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل صاحب گروه بود*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *امپراطور بود*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] = user_name
@@ -665,7 +665,7 @@ administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] = user_name
    if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is now the_ *group owner*", 0, "md")
    else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *به مقام صاحب گروه منتصب شد*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *امپراطور شد*", 0, "md")
    end
 end
   if cmd == "promote" then
@@ -673,7 +673,7 @@ if administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] then
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is already a_ *moderator*", 0, "md")
 else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل مدیر گروه بود*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *گلادیتاور بود*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = user_name
@@ -681,7 +681,7 @@ administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = user_name
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been_ *promoted*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *به مقام مدیر گروه منتصب شد*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *گلادیاتور شد*", 0, "md")
    end
 end
    if cmd == "remowner" then
@@ -689,7 +689,7 @@ if not administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] then
    if not lang then
 return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is not a_ *group owner*", 0, "md")
    else
-return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* *از قبل صاحب گروه نبود*", 0, "md")
+return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* *از قبل امپراطور نبود*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] = nil
@@ -697,7 +697,7 @@ administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] = nil
    if not lang then
 return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is no longer a_ *group owner*", 0, "md")
     else
-return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از مقام صاحب گروه برکنار شد*", 0, "md")
+return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از مقام امپراطوری برکنار شد*", 0, "md")
    end
 end
    if cmd == "demote" then
@@ -705,7 +705,7 @@ if not administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] then
     if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is not a_ *moderator*", 0, "md")
     else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل مدیر گروه نبود*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از قبل گلادیاتور نبود*", 0, "md")
    end
   end
 administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = nil
@@ -713,7 +713,7 @@ administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = nil
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been_ *demoted*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از مقام مدیر گروه برکنار شد*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *از مقام گلادیاتوری برکنار شد*", 0, "md")
    end
 end
     if cmd == "whois" then
@@ -766,7 +766,7 @@ if lock_link == "yes" then
 if not lang then
  return "*Link* _Posting Is Already Locked_"
 elseif lang then
- return "ارسال لینک در گروه هم اکنون ممنوع است"
+ return "⚔️ ارسال لینک در قلمرو ممنوع بود⚔️"
 end
 else
 data[tostring(target)]["settings"]["lock_link"] = "yes"
@@ -774,7 +774,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "*Link* _Posting Has Been Locked_"
 else
- return "ارسال لینک در گروه ممنوع شد"
+ return "⚔ارسال لینک در قلمرو ممنوع شد⚔"
 end
 end
 end
@@ -795,14 +795,14 @@ local lock_link = data[tostring(target)]["settings"]["lock_link"]
 if not lang then
 return "*Link* _Posting Is Not Locked_" 
 elseif lang then
-return "ارسال لینک در گروه ممنوع نمیباشد"
+return "⚜ارسال لینک در قلمرو ممنوع نمیباشد⚜"
 end
 else 
 data[tostring(target)]["settings"]["lock_link"] = "no" save_data(_config.moderation.data, data) 
 if not lang then
 return "*Link* _Posting Has Been Unlocked_" 
 else
-return "ارسال لینک در گروه آزاد شد"
+return "❗️ارسال لینک درقلمرو آزاد شد❗️"
 end
 end
 end
@@ -824,7 +824,7 @@ if lock_tag == "yes" then
 if not lang then
  return "*Tag* _Posting Is Already Locked_"
 elseif lang then
- return "ارسال تگ در گروه هم اکنون ممنوع است"
+ return "🔱 ارسال #یوزرنیم در قلمرو  ممنوع بود 🔱"
 end
 else
  data[tostring(target)]["settings"]["lock_tag"] = "yes"
@@ -832,7 +832,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "*Tag* _Posting Has Been Locked_"
 else
- return "ارسال تگ در گروه ممنوع شد"
+ return "⚜️ ارسال #یوزرنیم در قلمرو ممنوع شد ⚜️"
 end
 end
 end
@@ -853,14 +853,14 @@ local lock_tag = data[tostring(target)]["settings"]["lock_tag"]
 if not lang then
 return "*Tag* _Posting Is Not Locked_" 
 elseif lang then
-return "ارسال تگ در گروه ممنوع نمیباشد"
+return "🔆 ارسال #یوزرنیم در قلمرو ممنوع نبود 🔆"
 end
 else 
 data[tostring(target)]["settings"]["lock_tag"] = "no" save_data(_config.moderation.data, data) 
 if not lang then
 return "*Tag* _Posting Has Been Unlocked_" 
 else
-return "ارسال تگ در گروه آزاد شد"
+return "⚠️ ارسال #یوزرنیم در قلمرو  ازاد شد ⚠️"
 end
 end
 end
@@ -1056,7 +1056,7 @@ if lock_spam == "yes" then
 if not lang then
  return "*Spam* _Is Already Locked_"
 elseif lang then
- return "ارسال هرزنامه در گروه هم اکنون ممنوع است"
+ return "🔱 ارسال #اسپم در قلمرو  ممنوع بود 🔱"
 end
 else
  data[tostring(target)]["settings"]["lock_spam"] = "yes"
@@ -1064,7 +1064,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "*Spam* _Has Been Locked_"
 else
- return "ارسال هرزنامه در گروه ممنوع شد"
+ return "⚜️ ارسال #اسپم در قلمرو ممنوع شد ⚜️"
 end
 end
 end
@@ -1085,7 +1085,7 @@ local lock_spam = data[tostring(target)]["settings"]["lock_spam"]
 if not lang then
 return "*Spam* _Posting Is Not Locked_" 
 elseif lang then
- return "ارسال هرزنامه در گروه ممنوع نمیباشد"
+ return "🔆 ارسال #اسپم در قلمرو ممنوع نبود 🔆"
 end
 else 
 data[tostring(target)]["settings"]["lock_spam"] = "no" 
@@ -1093,7 +1093,7 @@ save_data(_config.moderation.data, data)
 if not lang then 
 return "*Spam* _Posting Has Been Unlocked_" 
 else
- return "ارسال هرزنامه در گروه آزاد شد"
+ return "⚠️ ارسال #اسپم در قلمرو  ازاد شد ⚠️"
 end
 end
 end
@@ -1115,7 +1115,7 @@ if lock_flood == "yes" then
 if not lang then
  return "*Flooding* _Is Already Locked_"
 elseif lang then
- return "ارسال پیام مکرر در گروه هم اکنون ممنوع است"
+ return "🔱 ارسال #پیام مکرر در قلمرو  ممنوع بود 🔱"
 end
 else
  data[tostring(target)]["settings"]["flood"] = "yes"
@@ -1123,7 +1123,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "*Flooding* _Has Been Locked_"
 else
- return "ارسال پیام مکرر در گروه ممنوع شد"
+ return "⚜️ ارسال #پیام مکرر در قلمرو ممنوع شد ⚜️"
 end
 end
 end
@@ -1144,14 +1144,14 @@ local lock_flood = data[tostring(target)]["settings"]["flood"]
 if not lang then
 return "*Flooding* _Is Not Locked_" 
 elseif lang then
-return "ارسال پیام مکرر در گروه ممنوع نمیباشد"
+return "🔆 ارسال #پیام مکرر در قلمرو ممنوع نبود 🔆"
 end
 else 
 data[tostring(target)]["settings"]["flood"] = "no" save_data(_config.moderation.data, data) 
 if not lang then
 return "*Flooding* _Has Been Unlocked_" 
 else
-return "ارسال پیام مکرر در گروه آزاد شد"
+return "⚠️ ارسال #پیام مکرر در قلمرو  ازاد شد ⚠️"
 end
 end
 end
@@ -1173,7 +1173,7 @@ if lock_bots == "yes" then
 if not lang then
  return "*Bots* _Protection Is Already Enabled_"
 elseif lang then
- return "محافظت از گروه در برابر ربات ها هم اکنون فعال است"
+ return "#محافظت ☠️ از قلمرو در برابر ربات های مخرب از قبل فعال است☠️"
 end
 else
  data[tostring(target)]["settings"]["lock_bots"] = "yes"
@@ -1181,7 +1181,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "*Bots* _Protection Has Been Enabled_"
 else
- return "محافظت از گروه در برابر ربات ها فعال شد"
+ return "محافظت ☠️از قلمرو در برابر ربات های مخرب  فعال شد☠️"
 end
 end
 end
@@ -1202,14 +1202,14 @@ local lock_bots = data[tostring(target)]["settings"]["lock_bots"]
 if not lang then
 return "*Bots* _Protection Is Not Enabled_" 
 elseif lang then
-return "محافظت از گروه در برابر ربات ها غیر فعال است"
+return "#محافظت ❌از قلمرو در برابر ربات های مخرب غیر فعال است❌"
 end
 else 
 data[tostring(target)]["settings"]["lock_bots"] = "no" save_data(_config.moderation.data, data) 
 if not lang then
 return "*Bots* _Protection Has Been Disabled_" 
 else
-return "محافظت از گروه در برابر ربات ها غیر فعال شد"
+return "#محافظت ❌از قلمرو در برابر ربات های مخرب آزاد است❌"
 end
 end
 end
@@ -1348,7 +1348,7 @@ if lock_webpage == "yes" then
 if not lang then
  return "*Webpage* _Is Already Locked_"
 elseif lang then
- return "ارسال صفحات وب در گروه هم اکنون ممنوع است"
+ return "🔱 ارسال #وبسایت در قلمرو  ممنوع بود 🔱"
 end
 else
  data[tostring(target)]["settings"]["lock_webpage"] = "yes"
@@ -1356,7 +1356,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "*Webpage* _Has Been Locked_"
 else
- return "ارسال صفحات وب در گروه ممنوع شد"
+ return "⚜️ ارسال #وبسایت در قلمرو ممنوع شد ⚜️"
 end
 end
 end
@@ -1377,7 +1377,7 @@ local lock_webpage = data[tostring(target)]["settings"]["lock_webpage"]
 if not lang then
 return "*Webpage* _Is Not Locked_" 
 elseif lang then
-return "ارسال صفحات وب در گروه ممنوع نمیباشد"
+return "🔆 ارسال #وبسایت در قلمرو ممنوع نبود 🔆"
 end
 else 
 data[tostring(target)]["settings"]["lock_webpage"] = "no"
@@ -1385,7 +1385,7 @@ save_data(_config.moderation.data, data)
 if not lang then
 return "*Webpage* _Has Been Unlocked_" 
 else
-return "ارسال صفحات وب در گروه آزاد شد"
+return "⚠️ ارسال #وبسایت در قلمرو  ازاد شد ⚠️"
 end
 end
 end
@@ -1661,7 +1661,7 @@ if mute_gif == "yes" then
 if not lang then
  return "*Mute Gif* _Is Already Enabled_"
 elseif lang then
- return "بیصدا کردن تصاویر متحرک فعال است"
+ return "⚔️ ممنوعیت ارسال #تصاویر متحرک  فعال بود ⚔️"
 end
 else
  data[tostring(target)]["mutes"]["mute_gif"] = "yes" 
@@ -1669,7 +1669,7 @@ save_data(_config.moderation.data, data)
 if not lang then 
  return "*Mute Gif* _Has Been Enabled_"
 else
- return "بیصدا کردن تصاویر متحرک فعال شد"
+ return "✔️ ممنوعیت ارسال #تصاویر متحرک  فعال شد ✔️"
 end
 end
 end
@@ -1690,7 +1690,7 @@ local mute_gif = data[tostring(target)]["mutes"]["mute_gif"]
 if not lang then
 return "*Mute Gif* _Is Already Disabled_" 
 elseif lang then
-return "بیصدا کردن تصاویر متحرک غیر فعال بود"
+return "🔘 ممنوعیت ارسال #تصاویر متحرک  فعال نیست 🔘"
 end
 else 
 data[tostring(target)]["mutes"]["mute_gif"] = "no"
@@ -1698,7 +1698,7 @@ data[tostring(target)]["mutes"]["mute_gif"] = "no"
 if not lang then
 return "*Mute Gif* _Has Been Disabled_" 
 else
-return "بیصدا کردن تصاویر متحرک غیر فعال شد"
+return "❗️ ممنوعیت ارسال #تصاویر متحرک  آزاد شد ❗️"
 end
 end
 end
@@ -1893,7 +1893,7 @@ if mute_photo == "yes" then
 if not lang then
  return "*Mute Photo* _Is Already Enabled_"
 elseif lang then
- return "بیصدا کردن عکس فعال است"
+ return "⚔️ ممنوعیت ارسال #عکس  فعال بود ⚔️"
 end
 else
  data[tostring(target)]["mutes"]["mute_photo"] = "yes" 
@@ -1901,7 +1901,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "*Mute Photo* _Has Been Enabled_"
 else
- return "بیصدا کردن عکس فعال شد"
+ return "✔️ ممنوعیت ارسال #عکس  فعال شد ✔️"
 end
 end
 end
@@ -1922,7 +1922,7 @@ local mute_photo = data[tostring(target)]["mutes"]["mute_photo"]
 if not lang then
 return "*Mute Photo* _Is Already Disabled_" 
 elseif lang then
-return "بیصدا کردن عکس غیر فعال است"
+return "🔘 ممنوعیت ارسال #عکس فعال نیست 🔘"
 end
 else 
 data[tostring(target)]["mutes"]["mute_photo"] = "no"
@@ -1930,7 +1930,7 @@ data[tostring(target)]["mutes"]["mute_photo"] = "no"
 if not lang then
 return "*Mute Photo* _Has Been Disabled_" 
 else
-return "بیصدا کردن عکس غیر فعال شد"
+return "❗️ ممنوعیت ارسال #عکس آزاد شد ❗️"
 end
 end
 end
@@ -1951,7 +1951,7 @@ if mute_video == "yes" then
 if not lang then
  return "*Mute Video* _Is Already Enabled_"
 elseif lang then
- return "بیصدا کردن فیلم فعال است"
+ return "⚔️ ممنوعیت ارسال #ویدیو فعال بود ⚔️"
 end
 else
  data[tostring(target)]["mutes"]["mute_video"] = "yes" 
@@ -1959,7 +1959,7 @@ save_data(_config.moderation.data, data)
 if not lang then 
  return "*Mute Video* _Has Been Enabled_"
 else
- return "بیصدا کردن فیلم فعال شد"
+ return "✔️ ممنوعیت ارسال #ویدیو فعال شد ✔️"
 end
 end
 end
@@ -1980,7 +1980,7 @@ local mute_video = data[tostring(target)]["mutes"]["mute_video"]
 if not lang then
 return "*Mute Video* _Is Already Disabled_" 
 elseif lang then
-return "بیصدا کردن فیلم غیر فعال است"
+return "🔘 ممنوعیت ارسال #ویدیو فعال نیست 🔘"
 end
 else 
 data[tostring(target)]["mutes"]["mute_video"] = "no"
@@ -1988,7 +1988,7 @@ data[tostring(target)]["mutes"]["mute_video"] = "no"
 if not lang then
 return "*Mute Video* _Has Been Disabled_" 
 else
-return "بیصدا کردن فیلم غیر فعال شد"
+return "❗️ ممنوعیت ارسال #ویدیو  آزاد شد ❗️"
 end
 end
 end
@@ -2009,7 +2009,7 @@ if mute_audio == "yes" then
 if not lang then
  return "*Mute Audio* _Is Already Enabled_"
 elseif lang then
- return "بیصدا کردن آهنگ فعال است"
+ return "⚔️ ممنوعیت ارسال #آهنگ فعال بود ⚔️"
 end
 else
  data[tostring(target)]["mutes"]["mute_audio"] = "yes" 
@@ -2017,7 +2017,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "*Mute Audio* _Has Been Enabled_"
 else 
-return "بیصدا کردن آهنگ فعال شد"
+return "✔️ ممنوعیت ارسال #آهنگ فعال شد ✔️"
 end
 end
 end
@@ -2038,7 +2038,7 @@ local mute_audio = data[tostring(target)]["mutes"]["mute_audio"]
 if not lang then
 return "*Mute Audio* _Is Already Disabled_" 
 elseif lang then
-return "بیصدا کردن آهنک غیر فعال است"
+return "🔘 ممنوعیت ارسال #آهنگ فعال نیست 🔘"
 end
 else 
 data[tostring(target)]["mutes"]["mute_audio"] = "no"
@@ -2046,7 +2046,7 @@ data[tostring(target)]["mutes"]["mute_audio"] = "no"
 if not lang then 
 return "*Mute Audio* _Has Been Disabled_"
 else
-return "بیصدا کردن آهنگ غیر فعال شد" 
+return "❗️ ممنوعیت ارسال #آهنگ آزاد شد ❗️" 
 end
 end
 end
@@ -2067,7 +2067,7 @@ if mute_voice == "yes" then
 if not lang then
  return "*Mute Voice* _Is Already Enabled_"
 elseif lang then
- return "بیصدا کردن صدا فعال است"
+ return "⚔️ ممنوعیت ارسال #ویس فعال بود ⚔️"
 end
 else
  data[tostring(target)]["mutes"]["mute_voice"] = "yes" 
@@ -2075,7 +2075,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "*Mute Voice* _Has Been Enabled_"
 else
- return "بیصدا کردن صدا فعال شد"
+ return "✔️ ممنوعیت ارسال #ویس فعال شد ✔️"
 end
 end
 end
@@ -2096,7 +2096,7 @@ local mute_voice = data[tostring(target)]["mutes"]["mute_voice"]
 if not lang then
 return "*Mute Voice* _Is Already Disabled_" 
 elseif lang then
-return "بیصدا کردن صدا غیر فعال است"
+return "🔘 ممنوعیت ارسال #ویس فعال نیست 🔘"
 end
 else 
 data[tostring(target)]["mutes"]["mute_voice"] = "no"
@@ -2104,7 +2104,7 @@ data[tostring(target)]["mutes"]["mute_voice"] = "no"
 if not lang then 
 return "*Mute Voice* _Has Been Disabled_" 
 else
-return "بیصدا کردن صدا غیر فعال شد"
+return "❗️ ممنوعیت ارسال #ویس آزاد شد ❗️"
 end
 end
 end
@@ -2125,7 +2125,7 @@ if mute_sticker == "yes" then
 if not lang then
  return "*Mute Sticker* _Is Already Enabled_"
 elseif lang then
- return "بیصدا کردن برچسب فعال است"
+ return "⚔️ ممنوعیت ارسال #استیکر فعال بود ⚔️"
 end
 else
  data[tostring(target)]["mutes"]["mute_sticker"] = "yes" 
@@ -2133,7 +2133,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "*Mute Sticker* _Has Been Enabled_"
 else
- return "بیصدا کردن برچسب فعال شد"
+ return "✔️ ممنوعیت ارسال #استیکر فعال شد ✔️"
 end
 end
 end
@@ -2154,7 +2154,7 @@ local mute_sticker = data[tostring(target)]["mutes"]["mute_sticker"]
 if not lang then
 return "*Mute Sticker* _Is Already Disabled_" 
 elseif lang then
-return "بیصدا کردن برچسب غیر فعال است"
+return "🔘 ممنوعیت ارسال #استیکر فعال نیست 🔘"
 end
 else 
 data[tostring(target)]["mutes"]["mute_sticker"] = "no"
@@ -2162,7 +2162,7 @@ data[tostring(target)]["mutes"]["mute_sticker"] = "no"
 if not lang then 
 return "*Mute Sticker* _Has Been Disabled_"
 else
-return "بیصدا کردن برچسب غیر فعال شد"
+return "❗️ ممنوعیت ارسال #استیکر آزاد شد ❗️"
 end 
 end
 end
@@ -2241,7 +2241,7 @@ if mute_forward == "yes" then
 if not lang then
  return "*Mute Forward* _Is Already Enabled_"
 elseif lang then
- return "بیصدا کردن نقل قول فعال است"
+ return "⚔️ ممنوعیت ارسال #فوروارد فعال بود ⚔️"
 end
 else
  data[tostring(target)]["mutes"]["mute_forward"] = "yes" 
@@ -2249,7 +2249,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "*Mute Forward* _Has Been Enabled_"
 else
- return "بیصدا کردن نقل قول فعال شد"
+ return "✔️ ممنوعیت ارسال #فوروارد فعال شد ✔️"
 end
 end
 end
@@ -2270,7 +2270,7 @@ local mute_forward = data[tostring(target)]["mutes"]["mute_forward"]
 if not lang then
 return "*Mute Forward* _Is Already Disabled_"
 elseif lang then
-return "بیصدا کردن نقل قول غیر فعال است"
+return "🔘 ممنوعیت ارسال #فوروارد فعال نیست 🔘"
 end 
 else 
 data[tostring(target)]["mutes"]["mute_forward"] = "no"
@@ -2278,7 +2278,7 @@ data[tostring(target)]["mutes"]["mute_forward"] = "no"
 if not lang then 
 return "*Mute Forward* _Has Been Disabled_" 
 else
-return "بیصدا کردن نقل قول غیر فعال شد"
+return "❗️ ممنوعیت ارسال #فوروارد آزاد شد ❗️"
 end
 end
 end
@@ -2720,7 +2720,7 @@ return "پیام سنجاق شده پاک شد"
 end
 end
 end
-if ((matches[1]:lower() == "whitelist" and not Clang) or (matches[1] == "لیست سفید" and Clang)) and matches[2] == "+" and is_mod(msg) then
+if ((matches[1]:lower() == "whitelist" and not Clang) or (matches[1] == "عضو ویژه" and Clang)) and matches[2] == "+" and is_mod(msg) then
 if not matches[3] and msg.reply_id then
     tdcli_function ({
       ID = "GetMessage",
@@ -2741,7 +2741,7 @@ tdcli_function ({
     }, action_by_username, {chat_id=msg.to.id,username=matches[3],cmd="setwhitelist"})
       end
    end
-if ((matches[1]:lower() == "whitelist" and not Clang) or (matches[1] == "لیست سفید" and Clang)) and matches[2] == "-" and is_mod(msg) then
+if ((matches[1]:lower() == "whitelist" and not Clang) or (matches[1] == "عضو ویژه" and Clang)) and matches[2] == "-" and is_mod(msg) then
 if not matches[3] and msg.reply_id then
     tdcli_function ({
       ID = "GetMessage",
@@ -2804,7 +2804,7 @@ tdcli_function ({
     }, action_by_username, {chat_id=msg.to.id,username=matches[2],cmd="remowner"})
       end
    end
-if ((matches[1] == "promote" and not Clang) or (matches[1] == "مدیر" and Clang)) and is_owner(msg) then
+if ((matches[1] == "promote" and not Clang) or (matches[1] == "ترفیع" and Clang)) and is_owner(msg) then
 if not matches[2] and msg.reply_id then
     tdcli_function ({
       ID = "GetMessage",
@@ -2825,7 +2825,7 @@ tdcli_function ({
     }, action_by_username, {chat_id=msg.to.id,username=matches[2],cmd="promote"})
       end
    end
-if ((matches[1] == "demote" and not Clang) or (matches[1] == "حذف مدیر" and Clang)) and is_owner(msg) then
+if ((matches[1] == "demote" and not Clang) or (matches[1] == "تنزل" and Clang)) and is_owner(msg) then
 if not matches[2] and msg.reply_id then
  tdcli_function ({
       ID = "GetMessage",
@@ -2864,7 +2864,7 @@ end
 if ((matches[2] == "edit" and not Clang) or (matches[2] == "ویرایش" and Clang)) then
 return lock_edit(msg, data, target)
 end
-if ((matches[2] == "spam" and not Clang) or (matches[2] == "هرزنامه" and Clang)) then
+if ((matches[2] == "spam" and not Clang) or (matches[2] == "اسپم" and Clang)) then
 return lock_spam(msg, data, target)
 end
 if ((matches[2] == "flood" and not Clang) or (matches[2] == "پیام مکرر" and Clang)) then
@@ -2904,7 +2904,7 @@ end
 if ((matches[2] == "edit" and not Clang) or (matches[2] == "ویرایش" and Clang)) then
 return unlock_edit(msg, data, target)
 end
-if ((matches[2] == "spam" and not Clang) or (matches[2] == "هرزنامه" and Clang)) then
+if ((matches[2] == "spam" and not Clang) or (matches[2] == "اسپم" and Clang)) then
 return unlock_spam(msg, data, target)
 end
 if ((matches[2] == "flood" and not Clang) or (matches[2] == "پیام مکرر" and Clang)) then
@@ -2931,7 +2931,7 @@ local target = msg.to.id
 if ((matches[2] == "all" and not Clang) or (matches[2] == "همه" and Clang)) then
 return mute_all(msg, data, target)
 end
-if ((matches[2] == "gif" and not Clang) or (matches[2] == "تصاویر متحرک" and Clang)) then
+if ((matches[2] == "gif" and not Clang) or (matches[2] == "گیف" and Clang)) then
 return mute_gif(msg, data, target)
 end
 if ((matches[2] == "text" and not Clang) or (matches[2] == "متن" and Clang)) then
@@ -2940,22 +2940,22 @@ end
 if ((matches[2] == "photo" and not Clang) or (matches[2] == "عکس" and Clang)) then
 return mute_photo(msg ,data, target)
 end
-if ((matches[2] == "video" and not Clang) or (matches[2] == "فیلم" and Clang)) then
+if ((matches[2] == "video" and not Clang) or (matches[2] == "ویدیو" and Clang)) then
 return mute_video(msg ,data, target)
 end
 if ((matches[2] == "audio" and not Clang) or (matches[2] == "اهنگ" and Clang)) then
 return mute_audio(msg ,data, target)
 end
-if ((matches[2] == "voice" and not Clang) or (matches[2] == "صدا" and Clang)) then
+if ((matches[2] == "voice" and not Clang) or (matches[2] == "ویس" and Clang)) then
 return mute_voice(msg ,data, target)
 end
-if ((matches[2] == "sticker" and not Clang) or (matches[2] == "برچسب" and Clang)) then
+if ((matches[2] == "sticker" and not Clang) or (matches[2] == "استیکر" and Clang)) then
 return mute_sticker(msg ,data, target)
 end
 if ((matches[2] == "contact" and not Clang) or (matches[2] == "مخاطب" and Clang)) then
 return mute_contact(msg ,data, target)
 end
-if ((matches[2] == "forward" and not Clang) or (matches[2] == "نقل قول" and Clang)) then
+if ((matches[2] == "forward" and not Clang) or (matches[2] == "فوروارد" and Clang)) then
 return mute_forward(msg ,data, target)
 end
 if ((matches[2] == "location" and not Clang) or (matches[2] == "موقعیت" and Clang)) then
@@ -2964,7 +2964,7 @@ end
 if ((matches[2] == "document" and not Clang) or (matches[2] == "اسناد" and Clang)) then
 return mute_document(msg ,data, target)
 end
-if ((matches[2] == "tgservice" and not Clang) or (matches[2] == "خدمات تلگرام" and Clang)) then
+if ((matches[2] == "tgservice" and not Clang) or (matches[2] == "سرویس تلگرام" and Clang)) then
 return mute_tgservice(msg ,data, target)
 end
 if ((matches[2] == "inline" and not Clang) or (matches[2] == "کیبورد شیشه ای" and Clang)) then
@@ -2983,7 +2983,7 @@ local target = msg.to.id
 if ((matches[2] == "all" and not Clang) or (matches[2] == "همه" and Clang)) then
 return unmute_all(msg, data, target)
 end
-if ((matches[2] == "gif" and not Clang) or (matches[2] == "تصاویر متحرک" and Clang)) then
+if ((matches[2] == "gif" and not Clang) or (matches[2] == "گیف" and Clang)) then
 return unmute_gif(msg, data, target)
 end
 if ((matches[2] == "text" and not Clang) or (matches[2] == "متن" and Clang)) then
@@ -2992,22 +2992,22 @@ end
 if ((matches[2] == "photo" and not Clang) or (matches[2] == "عکس" and Clang)) then
 return unmute_photo(msg ,data, target)
 end
-if ((matches[2] == "video" and not Clang) or (matches[2] == "فیلم" and Clang)) then
+if ((matches[2] == "video" and not Clang) or (matches[2] == "ویدیو" and Clang)) then
 return unmute_video(msg ,data, target)
 end
 if ((matches[2] == "audio" and not Clang) or (matches[2] == "اهنگ" and Clang)) then
 return unmute_audio(msg ,data, target)
 end
-if ((matches[2] == "voice" and not Clang) or (matches[2] == "صدا" and Clang)) then
+if ((matches[2] == "voice" and not Clang) or (matches[2] == "ویس" and Clang)) then
 return unmute_voice(msg ,data, target)
 end
-if ((matches[2] == "sticker" and not Clang) or (matches[2] == "برچسب" and Clang)) then
+if ((matches[2] == "sticker" and not Clang) or (matches[2] == "استیکر" and Clang)) then
 return unmute_sticker(msg ,data, target)
 end
 if ((matches[2] == "contact" and not Clang) or (matches[2] == "مخاطب" and Clang)) then
 return unmute_contact(msg ,data, target)
 end
-if ((matches[2] == "forward" and not Clang) or (matches[2] == "نقل قول" and Clang)) then
+if ((matches[2] == "forward" and not Clang) or (matches[2] == "فوروارد" and Clang)) then
 return unmute_forward(msg ,data, target)
 end
 if ((matches[2] == "location" and not Clang) or (matches[2] == "موقعیت" and Clang)) then
@@ -3016,7 +3016,7 @@ end
 if ((matches[2] == "document" and not Clang) or (matches[2] == "اسناد" and Clang)) then
 return unmute_document(msg ,data, target)
 end
-if ((matches[2] == "tgservice" and not Clang) or (matches[2] == "خدمات تلگرام" and Clang)) then
+if ((matches[2] == "tgservice" and not Clang) or (matches[2] == "سرویس تلگرام" and Clang)) then
 return unmute_tgservice(msg ,data, target)
 end
 if ((matches[2] == "inline" and not Clang) or (matches[2] == "کیبورد شیشه ای" and Clang)) then
@@ -3359,7 +3359,7 @@ end
 if ((matches[1] == "ownerlist" and not Clang) or (matches[1] == "لیست مالکان" and Clang)) and is_owner(msg) then
 return ownerlist(msg)
 end
-if ((matches[1] == "whitelist" and not Clang) or (matches[1] == "لیست سفید" and Clang)) and not matches[2] and is_mod(msg) then
+if ((matches[1] == "whitelist" and not Clang) or (matches[1] == "عضو ویژه" and Clang)) and not matches[2] and is_mod(msg) then
 return whitelist(msg.to.id)
 end
 
@@ -3738,10 +3738,54 @@ end
 return text..msg_caption
 end
 
+if ((matches[1] == "nerkh" and not Clang) or (matches[1] == "نرخ" and Clang)) and is_mod(msg) then
+text = [[
+`☠️ نرخ فروش ربات های کینگ و کویین ☠️`
+*king and queen*
+
+تعرفه های ربات :
+ماهـــیانـــہ یک‌ ربات⭐️7 تومان
+ماهـــیانـــہ دو ربات⭐️⭐️12 تومان
+ماهـــیانـــہ سه ربات⭐️⭐️⭐️17 تومان
+ماهـــیانـــہ چهار ربات⭐️⭐️⭐️⭐️22 تومان
+
+*〰〰〰〰〰〰〰*
+دائــــمـــی یک‌‌ ربات 🌟18 تومن
+دائــــمـــی دو‌‌ ربات 🌟🌟35 تومن
+دائــــمـــی سه‌‌ ربات🌟🌟🌟52 تومن
+دائــــمـــی چهار‌‌ ربات🌟🌟🌟🌟65 تومن
+
+*〰〰〰〰〰〰〰*
+ربات دیلیت مسیج در کنار انتی اسپم:ماهانه:5 و دائم:17
+
+ربات تک دیلیت مسیج :25
+
+*〰〰〰〰〰〰〰*
+1⃣._توجه داشته باشید به هیچ وجه نباید ربات رو از گروه حذف کنید و در صورت داشتن هرگونه مشکل فقط اون رو از ادمینی گروه بردارید و به بنده مراجعه کنید._
+
+2⃣._◾️پرداخت فقط از طریق کارت به کارت◾️._
+
+3️⃣._🔱داعم به منظور 3 ماهست.و پس از آن تمدید سرور🔱._
+*________________*
+*برای خرید به ایدی زیر مراجعه کنید :*
+🆔: @Erfaan051
+*و اگر ریپورت هستید به :*
+🆔: Erfaan051
+]]
+return text
+end
+
+if ((matches[1] == "ping" and not Clang) or (matches[1] == "انلاینی" and Clang)) and is_mod(msg) then
+text = [[
+⚔️ سربازانم در این قلمرو نگهبانی میدهند ⚔️
+]]
+return text
+end
+
 if (matches[1] == "راهنما" and Clang) and is_mod(msg) then
 if not lang then
 text = [[
-*Beyond Bot Commands:*
+*king and queen Bot Commands:*
 
 *مالک* `[username|id|reply]` 
 _Set Group Owner(Multi Owner)_
@@ -3749,10 +3793,10 @@ _Set Group Owner(Multi Owner)_
 *حذف مالک* `[username|id|reply]` 
  _Remove User From Owner List_
 
-*مدیر* `[username|id|reply]` 
+*ترفیع* `[username|id|reply]` 
 _Promote User To Group Admin_
 
-*حذف مدیر* `[username|id|reply]` 
+*تنزل* `[username|id|reply]` 
 _Demote User From Group Admins List_
 
 *تنظیم پیام مکرر* `[1-50]`
@@ -3779,7 +3823,7 @@ _Ban User From Group_
 *حذف بن* `[username|id|reply]` 
 _UnBan User From Group_
 
-*لیست سفید* [+-] `[username|id|reply]` 
+*عضو ویژه* [+-] `[username|id|reply]` 
 _Add Or Remove User From White List_
 
 *کاربری* `[username]`
@@ -3791,10 +3835,10 @@ _Show User ID_
 *شناسه* `[id]`
 _Show User's Username And Name_
 
-*قفل* `[لینک | ورود | تگ | ویرایش | عربی | وب | ربات |هرزنامه | پیام مکرر | فونت | فراخوانی | سنجاق]`
+*قفل* `[لینک | ورود | تگ | ویرایش | عربی | وب | ربات |اسپم | پیام مکرر | فونت | فراخوانی | سنجاق]`
 _If This Actions Lock, Bot Check Actions And Delete Them_
 
-*باز کردن* `[لینک | ورود | تگ | ویرایش | عربی | وب | ربات |هرزنامه | پیام مکرر | فونت | فراخوانی | سنجاق]`
+*باز کردن* `[لینک | ورود | تگ | ویرایش | عربی | وب | ربات |اسپم| پیام مکرر | فونت | فراخوانی | سنجاق]`
 _If This Actions Unlock, Bot Not Delete Them_
 
 *بیصدا* `[همه | تصاویر متحرک | عکس | اسناد | برچسب | صفحه کلید | فیلم | متن | نقل قول | موقعیت | اهنگ | صدا | مخاطب | کیبورد شیشه ای|بازی|خدمات تلگرام]`
@@ -3845,7 +3889,7 @@ _Show Group Owners List_
 *لیست مدیران* 
 _Show Group Moderators List_
 
-*لیست سفید* 
+*عضو ویژه* 
 _Show Group White List Users_
 
 *قوانین*
@@ -3895,7 +3939,7 @@ _Its Means, Only Group_ *Moderators/Owners* _Can Use It!_
 elseif lang then
 
 text = [[
-*دستورات ربات بیوند:*
+*دستورات ربات کینگ و کویین ورژن 10:*
 
 *مالک* `[یوزرنیم|ایدی|ریپلی]` 
 _انتخاب مالک گروه(قابل انتخاب چند مالک)_
@@ -3942,10 +3986,10 @@ _نمایش شناسه کاربر_
 *شناسه* `[ایدی]`
 _نمایش نام کاربر, نام کاربری و اطلاعات حساب_
 
-*قفل* `[لینک | ورود | تگ | ویرایش | عربی | وب | ربات |هرزنامه | پیام مکرر | فونت | فراخوانی | سنجاق]`
+*قفل* `[لینک | ورود | تگ | ویرایش | عربی | وب | ربات |اسپم | پیام مکرر | فونت | فراخوانی | سنجاق]`
 _در صورت قفل بودن فعالیت ها, ربات آنهارا حذف خواهد کرد_
 
-*باز کردن* `[لینک | ورود | تگ | ویرایش | عربی | وب | ربات |هرزنامه | پیام مکرر | فونت | فراخوانی | سنجاق]`
+*باز کردن* `[لینک | ورود | تگ | ویرایش | عربی | وب | ربات |اسپم | پیام مکرر | فونت | فراخوانی | سنجاق]`
 _در صورت قفل نبودن فعالیت ها, ربات آنهارا حذف نخواهد کرد_
 
 *بیصدا* `[همه | تصاویر متحرک | عکس | اسناد | برچسب | صفحه کلید | فیلم | متن | نقل قول | موقعیت | اهنگ | صدا | مخاطب | کیبورد شیشه ای|بازی|خدمات تلگرام]`
@@ -3960,7 +4004,7 @@ _ربات آنهارا ثبت خواهد کرد_
 *پاک کردن* `[بن | مدیران | ربات | قوانین | درباره | لیست سکوت | خوشامد]`   
 _ربات آنهارا پاک خواهد کرد_
 
-*لیست سفید* `[+|-]` `[یوزرنیم|ایدی|ریپلی]` 
+*عضو ویژه* `[+|-]` `[یوزرنیم|ایدی|ریپلی]` 
 _افزودن افراد به لیست سفید_
 
 *فیلتر* `[کلمه]`
@@ -3990,7 +4034,7 @@ _نمایش فهرست افراد بیصدا_
 *لیست فیلتر*
 _نمایش لیست کلمات فیلتر شده_
 
-*لیست سفید*
+*عضو ویژه*
 _نمایش افراد سفید شده از گروه_
 
 *لیست بن*
@@ -4246,10 +4290,14 @@ patterns ={
 "^([https?://w]*.?telegram.me/joinchat/%S+)$",
 "^[!/#](setwelcome) (.*)",
 "^[!/#](welcome) (.*)$",
+"^(ping)$",
+"^(نرخ)$",
 "^(زبان) (.*)$",
 "^(دستورات انگلیسی)$",
 "^(ایدی)$",
 "^(ایدی) (.*)$",
+"^(انلاینی)$",
+"^(نرخ)$",
 '^(تنظیمات)$',
 '^(تنظیمات کلی)$',
 '^(سنجاق)$',
@@ -4260,17 +4308,17 @@ patterns ={
 '^(ادمین گروه) (.*)$',
 '^(حذف ادمین گروه) (.*)$',
 '^(حذف ادمین گروه)$',
-'^(لیست سفید) ([+-]) (.*)$',
-'^(لیست سفید) ([+-])$',
-'^(لیست سفید)$',
+'^(عضو ویژه) ([+-]) (.*)$',
+'^(عضو ویژه) ([+-])$',
+'^(عضو ویژه)$',
 '^(مالک)$',
 '^(مالک) (.*)$',
 '^(حذف مالک) (.*)$',
 '^(حذف مالک)$',
-'^(مدیر)$',
-'^(مدیر) (.*)$',
-'^(حذف مدیر)$',
-'^(حذف مدیر) (.*)$',
+'^(ترفیع)$',
+'^(ترفیع) (.*)$',
+'^(تنزل)$',
+'^(تنزل) (.*)$',
 '^(قفل) (.*)$',
 '^(باز کردن) (.*)$',
 '^(بیصدا) (.*)$',
