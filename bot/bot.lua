@@ -92,7 +92,7 @@ function create_config( )
 		"plugins",
 		"report",
 		"tools",
-		"wran",
+		"warn",
 
 	},
     sudo_users = {244200491, sudo_id},
