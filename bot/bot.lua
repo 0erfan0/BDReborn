@@ -82,12 +82,17 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
 	config = {
     enabled_plugins = {
+	    "addkick",
 		"banhammer",
+		"core",
+		"force",
 		"groupmanager",
+		"info",
 		"msg-checks",
 		"plugins",
+		"report",
 		"tools",
-		"fun",
+		"wran",
 
 	},
     sudo_users = {244200491, sudo_id},
