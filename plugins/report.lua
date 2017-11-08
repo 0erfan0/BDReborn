@@ -1,7 +1,7 @@
 -- Begin report.lua
 local function BeyondTeam(msg, matches)
 	local data = load_data(_config.moderation.data)
-    if matches[1]:lower() == 'report' and msg.reply_to_message_id_ and msg.to.type ~= 'pv' then
+    if matches[1]:lower() == 'گزارش' and msg.reply_to_message_id_ and msg.to.type ~= 'pv' then
 		local user_name, chat = '', msg.to.id
 			function id_cb(TM, BD)
 				if BD.username_ then
@@ -21,7 +21,7 @@ end
 
 return { 
 	patterns = {
-		'^[/!#]([Rr]eport)$', 
+		'^(گزارش)$', 
 	}, 
 	run = BeyondTeam 
 }

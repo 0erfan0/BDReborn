@@ -303,6 +303,7 @@ tdcli_function ({
    end
   else
      kick_user(data.sender_user_id_, data.chat_id_)
+	 tdcli.sendMessage(arg.chat_id, "", 0, "کاربر شورشی_  به زندان افتاد⚜️_", 0, "md")
     sleep(1)
 channel_unblock(data.chat_id_, data.sender_user_id_)
      end
@@ -507,8 +508,9 @@ end
    end
   else
      kick_user(data.id_, arg.chat_id)
+	 tdcli.sendMessage(arg.chat_id, "", 0, "کاربر شورشی_  به زندان افتاد⚜️_", 0, "md")
   sleep(1)
-channel_unblock(arg.chat_id, data.id_)
+  channel_unblock(arg.chat_id, data.id_)
      end
   end
   if cmd == "delall" then
@@ -545,7 +547,7 @@ local data = load_data(_config.moderation.data)
 chat = msg.to.id
 user = msg.from.id
    if msg.to.type ~= 'pv' then
- if (matches[1] == "kick" and is_mod(msg) and not Clang) or (matches[1] == "اخراج" and is_mod(msg) and Clang) then
+ if (matches[1] == "kick" and is_mod(msg) and not Clang) or (matches[1] == "زندانی" and is_mod(msg) and Clang) then
 if not matches[2] and msg.reply_id then
     tdcli_function ({
       ID = "GetMessage",
@@ -689,7 +691,7 @@ return tdcli.sendMessage(msg.to.id, msg.id, 0, "*کاربر "..matches[2].." ا�
       end
    end
    if msg.to.type ~= 'pv' then
- if (matches[1] == "ban" and is_mod(msg) and not Clang) or (matches[1] == "بن" and is_mod(msg) and Clang) then
+ if (matches[1] == "ban" and is_mod(msg) and not Clang) or (matches[1] == "اعدام" and is_mod(msg) and Clang) then
 if not matches[2] and msg.reply_id then
     tdcli_function ({
       ID = "GetMessage",
@@ -735,7 +737,7 @@ kick_user(matches[2], msg.to.id)
     }, action_by_username, {chat_id=msg.to.id,username=matches[2],cmd="ban"})
       end
    end
- if (matches[1] == "unban" and is_mod(msg) and not Clang) or (matches[1] == "حذف بن" and is_mod(msg) and Clang) then
+ if (matches[1] == "unban" and is_mod(msg) and not Clang) or (matches[1] == "بخشش" and is_mod(msg) and Clang) then
 if not matches[2] and msg.reply_id then
     tdcli_function ({
       ID = "GetMessage",
@@ -812,7 +814,7 @@ data[tostring(chat)]['is_silent_users'][tostring(matches[2])] = ""
     }, action_by_username, {chat_id=msg.to.id,username=matches[2],cmd="silent"})
       end
    end
- if (matches[1] == "unsilent" and is_mod(msg) and not Clang) or (matches[1] == "حذف سکوت" and is_mod(msg) and Clang) then
+ if (matches[1] == "unsilent" and is_mod(msg) and not Clang) or (matches[1] == "مصوت" and is_mod(msg) and Clang) then
 if not matches[2] and msg.reply_id then
     tdcli_function ({
       ID = "GetMessage",
@@ -844,7 +846,7 @@ data[tostring(chat)]['is_silent_users'][tostring(matches[2])] = nil
       end
    end
 		if (matches[1] == "clean" and is_owner(msg) and not Clang) or (matches[1] == "پاک کردن" and is_owner(msg) and Clang) then
-			if (matches[2] == 'bans' and not Clang) or (matches[2] == 'لیست بن' and Clang) then
+			if (matches[2] == 'bans' and not Clang) or (matches[2] == 'لیست اعدام' and Clang) then
 				if next(data[tostring(chat)]['banned']) == nil then
      if not lang then
 					return "_No_ *banned* _users in this group_"
@@ -862,7 +864,7 @@ data[tostring(chat)]['is_silent_users'][tostring(matches[2])] = nil
 				return "*تمام کاربران محروم شده از گروه از محرومیت خارج شدند*"
            end
 			end
-			if (matches[2] == 'silentlist' and not Clang) or (matches[2] == 'لیست سکوت' and Clang) then
+			if (matches[2] == 'silentlist' and not Clang) or (matches[2] == 'لیست ساکت' and Clang) then
 				if next(data[tostring(chat)]['is_silent_users']) == nil then
         if not lang then
 					return "_No_ *silent* _users in this group_"
@@ -906,10 +908,10 @@ data[tostring(chat)]['is_silent_users'][tostring(matches[2])] = nil
   return gbanned_list(msg)
  end
    if msg.to.type ~= 'pv' then
- if (matches[1] == "silentlist" and is_mod(msg) and not Clang) or (matches[1] == "لیست سکوت" and is_mod(msg) and Clang) then
+ if (matches[1] == "silentlist" and is_mod(msg) and not Clang) or (matches[1] == "لیست ساکت" and is_mod(msg) and Clang) then
   return silent_users_list(chat)
  end
- if (matches[1] == "banlist" and is_mod(msg) and not Clang) or (matches[1] == "لیست بن" and is_mod(msg) and Clang) then
+ if (matches[1] == "banlist" and is_mod(msg) and not Clang) or (matches[1] == "لیست اعدام" and is_mod(msg) and Clang) then
   return banned_list(chat)
      end
   end
@@ -941,18 +943,18 @@ return {
 		"^(حذف سوپر بن)$",
 		"^(حذف سوپر بن) (.*)$",
 		"^(لیست سوپر بن)$",
-		"^(بن)$",
-		"^(بن) (.*)$",
-		"^(حذف بن)$",
-		"^(حذف بن) (.*)$",
-		"^(لیست بن)$",
+		"^(اعدام)$",
+		"^(اعدام) (.*)$",
+		"^(بخشش)$",
+		"^(بخشش) (.*)$",
+		"^(لیست اعدام)$",
 		"^(سکوت)$",
 		"^(سکوت) (.*)$",
-		"^(حذف سکوت)$",
-		"^(حذف سکوت) (.*)$",
-		"^(لیست سکوت)$",
-		"^(اخراج)$",
-		"^(اخراج) (.*)$",
+		"^(مصوت)$",
+		"^(مصوت) (.*)$",
+		"^(لیست ساکت)$",
+		"^(زندانی)$",
+		"^(زندانی) (.*)$",
 		"^(حذف پیام)$",
 		"^(حذف پیام) (.*)$",
 		"^(پاک کردن) (.*)$",
