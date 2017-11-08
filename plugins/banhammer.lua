@@ -769,7 +769,7 @@ return tdcli.sendMessage(msg.to.id, msg.id, 0, "*کاربر "..matches[2].." ا�
     }, action_by_username, {chat_id=msg.to.id,username=matches[2],cmd="unban"})
       end
    end
- if (matches[1] == "silent" and is_mod(msg) and not Clang) or (matches[1] == "سکوت" and is_mod(msg) and Clang) then
+ if (matches[1] == "silent" and is_mod(msg) and not Clang) or (matches[1] == "ساکت" and is_mod(msg) and Clang) then
 if not matches[2] and msg.reply_id then
     tdcli_function ({
       ID = "GetMessage",
@@ -948,8 +948,8 @@ return {
 		"^(بخشش)$",
 		"^(بخشش) (.*)$",
 		"^(لیست اعدام)$",
-		"^(سکوت)$",
-		"^(سکوت) (.*)$",
+		"^(ساکت)$",
+		"^(ساکت) (.*)$",
 		"^(مصوت)$",
 		"^(مصوت) (.*)$",
 		"^(لیست ساکت)$",
