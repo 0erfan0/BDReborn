@@ -1,5 +1,5 @@
 local function run(msg, matches)
-    if matches[1] == 'addkick' and is_admin(msg) then
+    if matches[1] == 'addkick' and is_owner(msg) then
         if gp_type(msg.to.id) == "channel" then
             tdcli.getChannelMembers(msg.to.id, 0, "Kicked", 200, function (i, naji)
                 for k,v in pairs(naji.members_) do
